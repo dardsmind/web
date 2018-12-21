@@ -55,13 +55,12 @@ return [
         ],
 		'ftp' => [
 			'driver'   => 'ftp',
-			'host'     => '168.235.81.25',
-			'username' => 'admin_imgdev',
-			'password' => '75Tm3gwtou',
+			'host'     => 'localhost',
+			'username' => 'ftp_user',
+			'password' => 'password_here',
 			'root'     => '/public_html/',
 			'public'   => '/'	
 
-			// location: dashboard.psindex.com 
 			
 			
 			// Optional FTP Settings...
@@ -72,10 +71,10 @@ return [
 		],	
 		's3' => [
             'driver' => 's3',
-            'key' => 'AKIAJTT2EEQVML3CF43Q',
-            'secret' => '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',
+            'key' => 'KEY',
+            'secret' => 'SECRET',
             'region' => 'ca-central-1',
-            'bucket' => 'psi-media-library',
+            'bucket' => 'BUCKET',
 			'public' => '/'
         ],		
 

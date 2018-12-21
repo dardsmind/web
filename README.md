@@ -35,6 +35,6 @@ If you discover a security vulnerability within this CMS, please write a comment
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-Styleshout templates are released under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) License
+* The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+* Styleshout templates are released under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) License
 

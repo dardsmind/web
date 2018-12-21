@@ -3,16 +3,30 @@ I build my website from free templates at styleshout.com with laravel 5.2, and C
 > If you get something for free share it also for free, the world only advances when sharing
 
 ## Installation
-1. download the code from github
+1. go to your website home folder (same level of public_html) and download the code from github, all the codes will be downloaded on the "web" folder.
 ```bash
-git clone git@github.com:dardsmind/Mindworksoft-CMS-source-code.git
+git clone https://github.com/dardsmind/web.git
 ```
-2. Create a folder called "web" on home folder your website
-3. copy all files from from the downloaded files from github into the newly created "web" folder
-4. initialize laravel dependencies files, go to the web folder and execute the command below, it will create a vendor folder with all dependencies on it.
+2. go inside the "web" folder and initialize laravel dependencies files, it will create a vendor folder with all dependencies on it.
 ```bash
 composer update
 ```
+3. copy all the files from the public folder to your website public_html (important: this will overwrite any files on the public_html folder so make sure to back up all your files there)
+4. create a database on your website and write the database name, username and password on the web/config/database.php
+5. import the sql file to your database, the sql file is located on the web/database folder.
+6. generate a key for your website
+```bash
+php artisan key:generate
+```
+7. Modify the public_html/index.php file to adjust the paths to point to the directory containing the Laravel core files. Refer to the following code block. Again, adjust the paths as needed if you are deploying the application on a subdomain.
+```php
+require __DIR__.'/../web/bootstrap/autoload.php';
+```
+```php
+$app = require_once __DIR__.'/../web/bootstrap/app.php';
+```
+>note: if open_basedir error: edit /home/account/conf/web/[webdomain].httpd.conf and add the path of laravel app folder to the open_basedir value or depend on your hosting panel, in my case I use vestacp hosting panel
+
 
 
 ## Security Vulnerabilities
